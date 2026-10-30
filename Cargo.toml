@@ -1,0 +1,14 @@
+[package]
+name = "fw-demo"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cortex-m = { version = "0.7", features = ["critical-section-single-core"] }
+cortex-m-rt = "0.7"
+cortex-m-semihosting = "0.5"
+panic-halt = "1.0"
+
+[profile.release]
+opt-level = "s"
+debug = true
